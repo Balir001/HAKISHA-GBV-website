@@ -1,0 +1,313 @@
+.App {
+  max-width: 100%;
+  height: 100vh;
+  background: #fff;
+  color: #212121;
+  font-family: "Open Sans", sans-serif;
+  display: flex;
+  place-items: center;
+  flex-direction: column;
+  align-content: center;
+  justify-content: space-evenly;
+}
+.chat-space {
+  flex: 1; /* Ensure the chat space takes up remaining space */
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  width: 100%;
+}
+  body {
+    margin: 0%;
+    padding: 0%;
+  }
+  @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,700");
+  
+  .joinChatContainer {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .joinChatContainer h3 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  .joinChatContainer input {
+    width: 210px;
+    height: 40px;
+    margin: 7px;
+    border: 2px solid #43a047;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 16px;
+  }
+  
+  .joinChatContainer button {
+    width: 225px;
+    height: 50px;
+    margin: 7px;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 16px;
+    background: #43a047;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .joinChatContainer button:hover {
+    background: #2e7d32;
+  }
+  
+  .chat-window {
+    width: 100vh;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+ 
+  }
+  
+  .chat-window p {
+    margin: 0;
+  }
+  .chat-window .chat-header {
+    height: 45px;
+    
+    background: rgb(51, 71, 91);;
+    border-radius: 10px 10px 0 0;
+    position: relative;
+    cursor: pointer;
+    justify-content: flex-end;
+  }
+  .chat-window .chat-header p {
+    display: block;
+    padding: 0 1em 0 2em;
+    color: #fff;
+    font-weight: 700;
+    line-height: 45px;
+  }
+  
+  .chat-window .chat-body {
+    height: calc(450px - (45px + 70px));
+    
+    
+    border: 1px solid #263238;
+    background: #fff;
+  
+    position: relative;
+  }
+  .chat-window .chat-body .message-container {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  
+  .chat-window .chat-body .message-container::-webkit-scrollbar {
+    display: none;
+  }
+  .chat-window .chat-body .message {
+    height: auto;
+    padding: 10px;
+    display: flex;
+  }
+  
+  .chat-window .chat-body .message .message-content {
+    width: auto;
+    height: auto;
+    min-height: 40px;
+    max-width: 120px;
+    background-color: #43a047;
+    border-radius: 0px 8px 8px;;
+    color: white;
+    display: flex;
+    align-items: center;
+    margin-right: 5px;
+    margin-left: 5px;
+    padding-right: 5px;
+    padding-left: 5px;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    font-size: 8px; 
+  }
+  
+  #you {
+    justify-content: flex-end;
+  }
+  
+  #you .message-content {
+    justify-content: flex-end;
+  }
+  
+  #you .message-meta {
+    justify-content: flex-end;
+    margin-left: 5px;
+  }
+  
+  #other {
+    justify-content: flex-start;
+  }
+  
+  #other .message-content {
+    justify-content: flex-start;
+    background-color: cornflowerblue;
+  }
+  
+  #other .message-meta {
+    justify-content: flex-start;
+    margin-right: 5px;
+  }
+  
+  .message-meta #author {
+    margin-left: 10px;
+    font-weight: bold;
+  }
+  
+  .chat-window .chat-body .message .message-meta {
+    display: flex;
+    font-size: 5px;
+  }
+  
+  .chat-window .chat-footer {
+    height: 60px;
+    border: 1px solid #263238;
+    border-top: none;
+    display: flex;
+  }
+  
+  .chat-window .chat-footer input {
+    height: 80%;
+    flex: 85%;
+    border: 0;
+    padding: 0 0.7em;
+    font-size: 1em;
+    border-right: 1px dotted #607d8b;
+  
+    outline: none;
+    font-family: "Open Sans", sans-serif;
+  }
+  
+  .chat-window .chat-footer button {
+    border: 0;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    flex: 15%;
+    height: 100%;
+    background: transparent;
+    outline: none;
+    font-size: 25px;
+    color: lightgray;
+  }
+  
+  .chat-window .chat-footer button:hover {
+    color: #43a047;
+  }
+  .hide {
+    opacity: 0 !important;
+  }
+
+  .join-chat-window{
+
+    background-color: #f8f9f9;
+    padding: 5px;
+    border-radius: 10px;
+
+  }
+
+  user-Cases{
+    display: flex;
+    flex-direction: column;
+    
+  }
+
+  .Councelor-chat{
+    max-width: 100%;
+    display:flex;
+    flex-direction: row;
+    max-width: 100%;
+    padding: 0%;
+  }
+  .Victim-Profile{
+    display: flex;
+    flex-direction: column;
+    border: 2px solid blue;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    margin-left: 10px;
+    padding: 5px;
+    /*overflow-y: scroll;*/
+    /*overflow-x: hidden;*/
+  }
+
+  .Search-select{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid blue;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 5px;
+    
+  }
+ 
+   .border-blue {
+    border: 1px solid blue;
+  }
+
+  .chat-space{
+    display: flex;
+    align-items:start;
+    justify-content: center;
+    width:100%;
+  }
+
+  .Scroll-case{
+   overflow-y: scroll;
+   overflow-x: hidden; 
+   max-height: 100vh;
+  }
+
+  .online-user {
+    display: inline-block;
+    margin-left: 10px;
+  }
+  
+  .online-indicator {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: green;
+    margin-left: 5px;
+  }
+
+  .Councelor-chat{
+    display: flex;
+    
+    
+  }
+  .chat-header {
+    height: 45px;
+    background: rgb(51, 71, 91);
+    border-radius: 10px 10px 0 0;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    align-items: center; /* Center vertically */
+    padding: 0 10px; /* Add padding to separate the button from edges */
+  }
+  
+  .go-back-button {
+    background: transparent; /* Remove button background */
+    border: none; /* Remove button border */
+    color: #fff; /* Button text color */
+    cursor: pointer;
+    font-size: 16px;
+    margin-right: auto; /* Push the button to the left */
+  }

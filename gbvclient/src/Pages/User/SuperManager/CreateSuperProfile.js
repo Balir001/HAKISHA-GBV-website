@@ -1,0 +1,171 @@
+import React, { useState, useEffect } from "react";
+import { Formik, Form, Field, ErrorMessage } from "formik";
+import * as yup from "yup";
+import { Avatar } from "@mui/material";
+import { useGetData } from "../../../CustomHook/GetHook";
+import { usePostData } from "../../../CustomHook/posthooks";
+
+export const CreateSuperProfile = () => {
+  const [genderOptions, setGenderOptions] = useState([]);
+  const [selectedAvatar, setSelectedAvatar] = useState(""); // Store selected avatar image URL
+  const { data: options, loading: optionsLoading, error: optionsError } = useGetData('/entry/getGender');
+
+  useEffect(() => {
+    if (options) {
+      setGenderOptions(options);
+    }
+  }, [options]);
+
+  // const postData = usePostData('/user/createProfile');
+  const { data, userProfileData, loading, error, postData } = usePostData('user/createSuperManagerProfile');
+
+  const handleSubmit = async (values) => {
+    const formData = new FormData();
+  
+    // Append all form fields to the FormData object
+    for (const [key, value] of Object.entries(values)) {
+      if (key === 'avatar') {
+        // Append the file to the FormData object
+        formData.append(key, value, value.name);
+      } else {
+        // Append other fields as strings
+        formData.append(key, value);
+      }
+    }
+  
+    try {
+      await postData(formData);
+      // Handle success if needed
+    } catch (error) {
+      // Handle error
+      console.error('Error creating profile:', error);
+    }
+  };
+
+  // Authorization form schema
+  const schema = yup.object().shape({
+    firstName: yup.string().required("First name is required"),
+    lastName: yup.string().required("Last name is required"),
+    middleName: yup.string(),
+    dateOfBirth: yup.date().required("Date of birth is required"),
+    gender: yup.string().required("Gender is required"),
+    phoneNumber: yup.string().required("Phone number is required"),
+    avatar: yup.mixed().test("fileType", "Unsupported File Format", value => {
+      return value && /\.(jpg|jpeg|png)$/i.test(value.name);
+    }).test("fileSize", "File too large", value => {
+      return value && value.size <= 2000000; // 2MB max
+    })
+  });
+
+  // Initialize form values
+  const initialValues = {
+    firstName: "",
+    lastName: "",
+    middleName: "",
+    dateOfBirth: "",
+    gender: "",
+    phoneNumber: "",
+    avatar: "", // Initialize avatar field
+  };
+
+  if (optionsLoading) {
+    return <div>Loading gender options...</div>;
+  }
+
+  if (optionsError) {
+    return <div>Error fetching gender options: {optionsError.message}</div>;
+  }
+
+  return (
+    <div className="Create-Profile">
+      <h2>Create Profile</h2>
+      <Formik
+        initialValues={initialValues}
+        validationSchema={schema}
+        onSubmit={(values) => handleSubmit(values)}
+      >
+        {({ isSubmitting, setFieldValue, values }) => (
+          <Form>
+            <div style={{ position: "relative" }}>
+              {/* Avatar Image */}
+              <Avatar
+                src={selectedAvatar || "/default-avatar.png"}
+                alt={`${values.firstName} ${values.lastName}`}
+                style={{ width: 150, height: 150 }}
+                variant="circular"
+              />
+              {/* Clickable Image (Overlay) */}
+              <label htmlFor="avatar" style={{ position: "absolute", top: 0, left: 0 }}>
+                <img
+                  src="https://icons.iconarchive.com/icons/dtafalonso/android-lollipop/128/Downloads-icon.png"
+                  alt="Upload Avatar"
+                  style={{ width: "24px", height: "24px", cursor: "pointer" }} // Add cursor style
+                />
+              </label>
+              {/* Actual File Input (Hidden) */}
+              <input
+                type="file"
+                id="avatar"
+                name="avatar"
+                accept="image/*"
+                style={{ display: "none" }}
+                onChange={(event) => {
+                  const file = event.currentTarget.files[0];
+                  setFieldValue("avatar", file);
+                  setSelectedAvatar(URL.createObjectURL(file));
+                }}
+              />
+            </div>
+            {/* Other Form Fields */}
+            <div>
+              {/* First Name */}
+              <label htmlFor="firstName">First Name</label>
+              <ErrorMessage name="firstName" component="span" className="error" />
+              <Field type="text" id="firstName" name="firstName" />
+            </div>
+            <div>
+              {/* Last Name */}
+              <label htmlFor="lastName">Last Name</label>
+              <ErrorMessage name="lastName" component="span" className="error" />
+              <Field type="text" id="lastName" name="lastName" />
+            </div>
+            <div>
+              {/* Middle Name */}
+              <label htmlFor="middleName">Middle Name</label>
+              <Field type="text" id="middleName" name="middleName" />
+            </div>
+            <div>
+              {/* Date of Birth */}
+              <label htmlFor="dateOfBirth">Date of Birth</label>
+              <ErrorMessage name="dateOfBirth" component="span" className="error" />
+              <Field type="date" id="dateOfBirth" name="dateOfBirth" />
+            </div>
+            <div>
+              {/* Gender */}
+              <label htmlFor="gender">Gender</label>
+              <ErrorMessage name="gender" component="span" className="error" />
+              <Field as="select" id="gender" name="gender">
+                <option value="">Select Gender</option>
+                {genderOptions.map(gender => (
+                  <option key={gender.id} value={gender.id}>
+                    {gender.Gender}
+                  </option>
+                ))}
+              </Field>
+            </div>
+            <div>
+              {/* Phone Number */}
+              <label htmlFor="phoneNumber">Phone Number</label>
+              <ErrorMessage name="phoneNumber" component="span" className="error" />
+              <Field type="text" id="phoneNumber" name="phoneNumber" />
+            </div>
+            {/* Submit Button */}
+            <button type="submit" disabled={isSubmitting}>
+              Create
+            </button>
+          </Form>
+        )}
+      </Formik>
+    </div>
+  );
+};

@@ -1,0 +1,640 @@
+/* .error{
+    color: red;
+}
+
+.report-div{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  
+}
+
+
+
+
+.form-report ,.follow-upform {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding: 5px;
+  border-radius: 8px;
+  align-items: center;
+  align-content: center;
+  align-self: flex-start; 
+  max-height: 100%; 
+
+}
+
+.Login{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+}
+.form-usercreation {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  width:60%;
+  padding: 20px;
+  border-radius: 8px;
+  align-items: center;
+  max-width: 400px; 
+  margin: auto;
+}
+
+
+
+.rightdiv{
+  margin-right: 10px;
+  padding: 10px;
+  height: 100vh;
+}
+
+.leftdiv{
+  padding: 10px;
+  height: 100vh;
+}
+
+
+
+.button-container {
+  text-align: left;
+  margin-top: 10px; 
+}
+
+.button-container button {
+  width: 100%;
+  background-color: blue;
+  border-radius:8px;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+}
+
+.button-container button:disabled {
+  background-color: lightgray;
+  cursor: not-allowed;
+}
+
+.form-report label,select,input,textarea {
+  display: block;
+  margin-bottom: 5px; 
+  border-radius: 3px;
+}
+.registration-page{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.follow-up {
+  display: flex;
+  justify-content: center;
+  width:80%;
+  align-items: center;
+  background-color:white;
+  border-radius: 8px;
+  margin:5px;
+  padding: 2px;
+  
+
+}
+.User_view{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+}
+.Profile-viewing,.User_form,.form-Profilesetting div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-items: center;
+  background-color: #f8f9f9;
+  border-radius: 8px;
+  padding: 10px;
+  margin-left: 10px;
+
+}
+.Profile-editingView{
+width: 30%;
+}
+.chat-div{
+  width:50%;
+}
+
+.Profile-viewing{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-chat{
+  display: flex;
+  flex-direction: row;
+}
+.form-Profilesetting input {
+  border: none;
+  border-bottom: 1px solid #000; 
+  padding: 5px; 
+  margin-bottom: 10px; 
+  width: 100%; 
+  box-sizing: border-box; 
+  outline: none; 
+}
+
+.SubmitFollowUp{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-items: center;
+  background-color: #BFD7ED;
+  border-radius: 8px;
+  max-width: 50%;
+  max-height: 60%;
+  padding: 10px;
+  margin-left: 10px;
+
+
+}
+.reportmetadatatop{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  justify-items: center;
+  background-color: #BFD7ED;
+  border-radius: 8px;
+ 
+  padding: 10px;
+  margin-left: 10px;
+
+}
+.reportmetadatatop label{
+  margin: 5px;
+}
+#map {
+    position: relative;
+   
+  }
+
+  .account{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+  }
+
+  .Create-Profile,.account{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding: 5px;
+    width: 60%;
+    border-radius: 8px;
+  }
+
+   .Dashboard-head{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  } 
+
+  .user-account-p{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: Tahoma, sans-serif;
+  }
+  .User-Profile-div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .account{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+  }
+   */
+
+
+
+
+   /*grid css*/
+
+   .home ul li:first-child {
+    padding: 5px;
+  }
+  #HomeHeading{
+    font-family: 'Figtree', sans-serif;
+  
+   
+   
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+
+  }
+  .home{
+    background-color: whitesmoke;
+    padding: 8px;
+    margin: 5px;
+  }
+
+
+  .follow-upform {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 5px;
+    border-radius: 8px;
+    align-items: center;
+    align-content: center;
+    align-self: flex-start; 
+    max-height: 100%; 
+  
+  }
+  
+  .reportmetadatatop{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-items: center;
+    background-color: #BFD7ED;
+    border-radius: 8px;
+   
+    padding: 10px;
+    margin-left: 10px;
+  
+  }
+  
+  #map {
+    width: 100%;
+    max-width: 800px;
+    height: 50vh;
+    margin-bottom: 20px;
+  }
+  
+  .report-textarea {
+    height: 50vh;
+    width: 100%;
+    max-width: 60vw;
+  }
+  
+  .button-container {
+    margin-top: 20px;
+  }
+
+ 
+  
+  @media (max-width: 480px) {
+    .reportmetadatatop {
+      
+      display: flex;
+      flex-direction:column;
+      align-items: center;
+    }
+  
+    .reportmetadatatop label {
+      margin-bottom: 10px;
+    }
+  }
+
+  /* styles.css */
+@media (max-width: 480px) {
+  .Toastify__toast-container {
+    width: 90vw; /* Adjust the width on small screens */
+    border-radius: 10px;
+  }
+
+  .Toastify__toast {
+    font-size: 14px; /* Adjust the font size on small screens */
+    padding: 8px; /* Adjust the padding on small screens */
+    border-radius: 5px;
+   margin-left: auto;
+   margin-right: auto;
+  }
+
+  .Toastify__toast-body {
+    max-width: 90%; /* Prevent the toast body from overflowing */
+  }
+}
+
+.Dashboard{
+  
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.dashboard-grid-container {
+  display: grid;
+  gap: 5px;
+  /* background-color: #2196F3; */
+   padding: 10px; 
+}
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 5px;
+  
+}
+
+.item-head{
+  grid-column: 1 / span 3;
+  grid-row: 1;
+}
+
+.item-map {
+  grid-column: 1/span 3;
+  grid-row: 2 
+}
+
+.item-gender {
+  grid-column: 1/ span 2;
+  grid-row: 3 ;
+}
+
+.item-ageGroup {
+  grid-column: 1 / span 2;
+  grid-row: 4;
+}
+
+.item-modeOfViolence {
+  grid-column: 1 / span 2;
+  grid-row: 5;
+}
+
+.item-empty {
+  grid-column: 3;
+  grid-row: 3  /span 3 ;
+}
+
+.map-container{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: auto;
+
+}
+
+.Login .form-login {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 80%;
+  background-color: white;
+  margin: auto;
+}
+
+.form-usercreation {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  width:60%;
+  padding: 20px;
+  border-radius: 8px;
+  align-items: center;
+  max-width: 400px; 
+  margin: auto;
+}
+
+.account{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+}
+.passwordResetEmail{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border-radius: 8px;
+  padding: 5px;
+}
+
+.account{
+  display: flex;
+  flex-direction: column;
+   align-items: center;
+   align-content: center;
+   border-radius: 8px;
+}
+
+
+.Profile-viewing{
+  display: flex;
+  flex-direction: column;
+  justify-Content: center;
+  align-Items: center;
+  min-width: 75%;
+  min-height: 75%; 
+  background-color: #f8f9f9; 
+  padding: 5px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+
+}
+.Profile-editingView{
+
+  display: flex;
+  flex-direction: column;
+  justify-Content: center;
+  align-Items: center;
+  min-width: 100%;
+  min-height: 100vh; 
+  background-color: white; 
+  padding: 5px;
+
+}
+form{
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 8px;
+  min-width: 75%;
+  padding: 10px;
+  margin-left: 10px;
+  
+
+}
+
+
+
+.error{
+  color: red;
+}
+.Profile-editingView{
+width: 30%;
+}
+ 
+.EditUser{
+  width: 100%;
+}
+.editUserFunctions{
+  display: flex;
+  flex-direction: row;
+
+}
+
+
+.superManagerform{
+  width: 40%;
+}
+
+.User-Profile-div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.User-Profile-div p{
+color: red;
+}
+.SuperManager-AssignComponent{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 8px;
+  padding: 8px;
+}
+
+.AssignedUser{
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  border: 1px solid #2196F3;;
+  border-radius: 8px;
+  padding: 8px;
+  margin: 10px;
+  
+  
+}
+
+.reportLabel{
+  display: flex;
+  flex-direction: column;
+  margin: 3px;
+}
+
+.Create-Profile,.Update-Profile{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.Create-Profile form,.Create-Profile form div,.Update-Profile form,.Update-Profile form div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  
+  
+} 
+
+.submit-button{
+  margin: 10px;
+}
+
+.map-container{
+  width: 100%;
+  height: 100vh;
+}
+
+.profileView{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.assignform,.assignform div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+}
+
+.Login button {
+  margin-top: 16px; /* Adjust the value as per your preference */
+}
+
+.home{
+  background-color: #f9f9f9;
+}
+
+.home a{
+  text-decoration: none;
+}
+.footer-section a{
+  text-decoration: none;
+  color: cadetblue;
+}
+.passwordResetEmail{
+ width: 20%;
+}
+.acessories{
+  display: flex;
+  flex-direction: row;
+}
+.paleblue-icon {
+  color: paleblue; /* Or any other desired color */
+}
+.besides{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+
+/* .superManagerform, .EditUser{
+  width: 60%;
+
+} */
+
+
+/* .pie{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  width: 100%;
+  position: relative;
+} */
+
+
+
+
+
+
+  
+
+  
